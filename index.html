@@ -7,11 +7,29 @@
     <!-- <link href="/style.css" rel="stylesheet" type="text/css" media="all"> -->
     <style>
       body {
-        width: min(calc(100% - 2rem), 60ch);
-        margin-inline: auto;
-        line-height: 1.4;
         font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
         font-size: 1.2rem;
+        line-height: 1.4;
+      }
+      main {
+        width: min(calc(100% - 2rem), 60ch);
+        margin-inline: auto;
+      }
+      header, nav {
+        display: flex;
+        gap: 0.4rem 1rem;
+        flex-wrap: wrap;
+      }
+      header {
+        padding-inline: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav {
+	      margin-block-start: 0.25em;
+      }
+      h1 {
+        margin-block: 0;
       }
       li {
         margin-block: 0.5em;
@@ -20,10 +38,16 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to Whimsica11y!</h1>
+      <h1>Whimsica11y</h1>
+      <nav>
+        <a href="">perceivable</a>
+        <a href="">operable</a>
+        <a href="">understandable</a>
+        <a href="">robust</a>
+      </nav>
     </header>
     <main>
-      <h2>Introduction to Web Accessibility</h2>
+      <h2>Welcome to Web Accessibility</h2>
       <p>Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)</p>
 
       <p>Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.</p>
