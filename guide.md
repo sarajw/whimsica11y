@@ -1,5 +1,5 @@
 ---
-title: Guidelines
+title: Guide
 layout: whimsica11yLayout.html
 ---
 
