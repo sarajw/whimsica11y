@@ -32,6 +32,7 @@ li {
 iframe {
   display: block;
   margin-inline: auto;
+  max-width: 100%;
 }
 footer {
   text-align: end;
