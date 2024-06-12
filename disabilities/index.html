@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disabilities | Whimsica11y</title>
+    <!-- <link href="/style.css" rel="stylesheet" type="text/css" media="all"> -->
+    <style>
+      html {
+	      color-scheme: light dark;
+      }
+      body {
+        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+      main {
+        width: min(calc(100% - 2rem), 60ch);
+        margin-inline: auto;
+      }
+      header, nav {
+        display: flex;
+        gap: 0.4rem 1rem;
+        flex-wrap: wrap;
+      }
+      header {
+        padding-inline: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav {
+	      margin-block-start: 0.25em;
+      }
+      h1 {
+        margin-block: 0;
+      }
+      li {
+        margin-block: 0.5em;
+      }
+      iframe {
+        display: block;
+        margin-inline: auto;
+      }
+      footer {
+        text-align: end;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Whimsica11y</h1>
+      <nav>
+        <a href="/">home</a>
+        <a href="">disabilities</a>
+        <a href="">guidelines</a>
+        <a href="">tools</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Disabilities</h2>
+      <p>There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web! Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.</p>
+      
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tVErGewfgdg?si=znzfw08vV1nFWVb7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <p><a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:
+        <blockquote><q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for <strong>blindness</strong> and <strong>low vision</strong>, <strong>deafness</strong> and <strong>hearing loss</strong>, <strong>limited movement</strong>, <strong>speech disabilities</strong>, <strong>photosensitivity</strong>, and combinations of these, and some accommodation for <strong>learning disabilities</strong> and <strong>cognitive limitations</strong>; but will not address every user need for people with these disabilities.</q>
+        </blockquote>
+      </p>
+
+      <p>Yes, it's imperfect (aren't we all), but possible! In order to understand better how we can help people with disabilities, it may help to know the different ways in which we use the web.</p>
+      
+      <h2>Adaptive strategies</h2>
+      
+      <p>By changing built-in settings and features of a device's operating system or browser, a user can make the web more readable and usable.</p>
+      <p>These strategies include the use of:</p>
+      <ul>
+        <li><b>Zooming</b> - in order to see more detail in an image or more easily tap or click on a small target on the page.</li>
+        <li><b>Text size</b> - increasing only the text size for readability.</li>
+        <li><b>Light or dark modes</b> - depending on visual impairment or migraine triggers, one of these is often better.</li>
+        <li><b>Contrast</b> - using a specific contrast mode or forced colors to aid vision.</li>
+        <li><b>Autocomplete, autofill, predictive text</b> - not every user has a full keyboard, or can use it easily.</li>
+      </ul>
+
+      <h2>Assistive technologies</h2>
+      
+      <p>This term is usually used to mean hardware and software created specifically to aid interaction with a computer or other device.</p>
+      <p>Examples of these include:</p>
+      <ul>
+        <li><b>Screen readers</b> - software that reads out the contents and interactive elements that are on the screen or virtual screen.</li>
+        <li><b>Voice recognition</b> - for typing and commands.</li>
+        <li><b>Eye tracker</b> - for pointing and clicking, or drawing.</li>
+        <li><b>Switches</b> - often used with an interface that cycles through options or keyboard areas - made much more powerful with autocomplete and predictive text. Switches can be triggered by large buttons, sip/puff inputs, or many other kinds of sensor.</li>
+      </ul>
+      
+      <h2>Further reading</h2>
+      <a href="https://www.w3.org/WAI/people/">Accessibility: It’s About People</a>
+      
+    </main>
+    <footer>
+      <p>By <a href="https://sarajoy.dev">Sara Joy</a>.</p>
+    </footer>
+  </body>
+</html>
