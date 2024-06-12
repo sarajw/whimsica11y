@@ -41,7 +41,7 @@ nav, footer, h2 {
 }
 nav {
   margin-block-start: 0.25em;
-  font-size: clamp(1.2rem, 1rem + 2vw, 1.6rem);
+  font-size: clamp(1.4rem, 1rem + 1vw, 2rem);
 }
 h1 a, nav a:not(:hover, :focus, :focus-visible) {
   color: inherit;
