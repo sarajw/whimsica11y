@@ -4,7 +4,9 @@ layout: whimsica11yLayout.html
 ---
 
 ## Disability
-There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web! Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
+There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web!
+
+Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tVErGewfgdg?si=znzfw08vV1nFWVb7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

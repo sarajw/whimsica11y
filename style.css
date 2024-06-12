@@ -1,15 +1,29 @@
+@font-face {
+	font-family: 'Ships Whistle Italic';
+	src:
+	url('/assets/fonts/ShipsWhistle-Italic.woff2') format('woff2 supports variations'),
+	url('/assets//fonts/ShipsWhistle-Italic.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Ships Whistle';
+	src:
+	url('/assets//fonts/ShipsWhistle-Regular.woff2') format('woff2 supports variations'),
+	url('/assets//fonts/ShipsWhistle-Regular.woff2') format('woff2-variations');
+}
+
 html {
   color-scheme: light dark;
 }
 body {
   font-family: system-ui, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.4;
   color: color-mix(in srgb, Canvas 10%, CanvasText);
   background-color: color-mix(in srgb, Canvas 90%, CanvasText);
 }
 main {
-  width: min(calc(100% - 2rem), 60ch);
+  font-size: clamp(0.9rem, 1rem + 0.5vw, 1.5rem);
+  line-height: 1.4;
+  width: min(calc(100% - 1rem), 60ch);
   margin-inline: auto;
 }
 header, nav {
@@ -18,21 +32,26 @@ header, nav {
   flex-wrap: wrap;
 }
 header {
-  padding-inline: 1rem;
+  padding: 0.5rem;
   justify-content: space-between;
   align-items: center;
 }
-header, footer, h2 {
-  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+nav, footer, h2 {
+  font-family: 'Ships Whistle', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 nav {
   margin-block-start: 0.25em;
+  font-size: clamp(1.2rem, 1rem + 2vw, 1.6rem);
 }
-header a:not(:hover, :focus, :focus-visible) {
+h1 a, nav a:not(:hover, :focus, :focus-visible) {
   color: inherit;
   text-decoration: none;
 }
 h1 {
+  font-family: 'Ships Whistle Italic';
+	font-feature-settings: 'ss01';
+  font-size: clamp(2.5rem, 1rem + 5vw, 4rem);
+  font-weight: 400;
   margin-block: 0;
 }
 h2, h3, b, strong {
