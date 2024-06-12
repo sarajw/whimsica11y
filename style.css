@@ -5,6 +5,8 @@ body {
   font-family: system-ui, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
+  color: color-mix(in srgb, Canvas 10%, CanvasText);
+  background-color: color-mix(in srgb, Canvas 90%, CanvasText);
 }
 main {
   width: min(calc(100% - 2rem), 60ch);
