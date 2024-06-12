@@ -26,7 +26,8 @@ header, footer, h2 {
 nav {
   margin-block-start: 0.25em;
 }
-nav a:not(:hover, :focus, :focus-visible) {
+header a:not(:hover, :focus, :focus-visible) {
+  color: inherit;
   text-decoration: none;
 }
 h1 {
