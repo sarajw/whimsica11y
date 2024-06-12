@@ -18,6 +18,18 @@ We'll take it bit by bit, and try to apply it to our homepages.
 - **Understandable**: The content is understandable to its users.
 - **Robust**: The content is built with web standards that work across different browsers, now and in the future.
 
+## WCAG and the Smol / Indie / Revival Web
+
+thoughts: 
+
+Users vs. Visitors vs. Guests?
+
+Efficiency and ease of use vs. wanting a visitor to take their time.
+
+Not wanting to make it harder, but more exploratory.
+
+Not necessarily mutually exclusive.
+
 ## Here's a little of what I hope to cover:
 - Disability spectrum
 - Semantic HTML
