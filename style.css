@@ -33,6 +33,7 @@ iframe {
   display: block;
   margin-inline: auto;
   max-width: 100%;
+  aspect-ratio: 16/9;
 }
 footer {
   text-align: end;
