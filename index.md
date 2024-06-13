@@ -8,9 +8,14 @@ Hey, so you want your homepage to be more inclusive? We'd like to help you with 
 
 Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.
 
-The Web Content Accessibility Guidelines (WCAG) has covered almost everything, which is great. It also has almost everything, which is... a lot.
+## Web Content Accessibility Guidelines
+The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.
 
-We'll take it bit by bit, and try to apply it to our homepages.
+They're available for everyone to read. It's worth trying if you would like some solid bedtime reading! There is a lot to chew through though, so I would recommend it more as a reference. When something seems unclear in any accessibility advice you've read, go search for the issue you're concerned about and see if it clears it up for you:
+
+[Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+
+We'll take it bit by bit, and try to apply its principles to our homepages.
 
 ## The WCAG Principles
 - **Perceivable**: Users are able to perceive the content, using one or more of their senses.
