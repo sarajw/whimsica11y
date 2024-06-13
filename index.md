@@ -2,7 +2,7 @@
 title: Home
 layout: whimsica11yLayout.html
 ---
-## Welcome to Web Accessibility
+# Welcome to Web Accessibility
 
 Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)
 
