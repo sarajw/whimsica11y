@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-nav, footer, h2 {
+nav, footer, h1, h2, h3 {
   font-family: 'Ships Whistle', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 nav {
