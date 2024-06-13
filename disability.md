@@ -3,7 +3,7 @@ title: Disability
 layout: whimsica11yLayout.html
 ---
 
-## Disability
+# Disability
 There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web!
 
 Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
