@@ -8,6 +8,8 @@ Hey, so you want your homepage to be more inclusive? We'd like to help you with 
 
 Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.
 
+<p class="word-art" aria-hidden="true">Whimsica11y</p>
+
 ## Web Content Accessibility Guidelines
 The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.
 

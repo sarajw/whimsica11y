@@ -8,8 +8,22 @@
 @font-face {
 	font-family: 'Ships Whistle';
 	src:
-	url('/assets//fonts/ShipsWhistle-Regular.woff2') format('woff2 supports variations'),
-	url('/assets//fonts/ShipsWhistle-Regular.woff2') format('woff2-variations');
+	url('/assets/fonts/ShipsWhistle-Regular.woff2') format('woff2 supports variations'),
+	url('/assets/fonts/ShipsWhistle-Regular.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Ships Whistle Italic Rough';
+	src:
+	url('/assets/fonts/ShipsWhistle-ItalicRough.woff2') format('woff2 supports variations'),
+	url('/assets/fonts/ShipsWhistle-ItalicRough.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Ships Whistle Rough';
+	src:
+	url('/assets/fonts/ShipsWhistle-Rough.woff2') format('woff2 supports variations'),
+	url('/assets/fonts/ShipsWhistle-Rough.woff2') format('woff2-variations');
 }
 
 html {
@@ -21,7 +35,7 @@ body {
   background-color: color-mix(in srgb, Canvas 90%, CanvasText);
 }
 main {
-  font-size: clamp(0.9rem, 1rem + 0.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 1rem + 0.5vw, 1.2rem);
   line-height: 1.4;
   width: min(calc(100% - 1rem), 60ch);
   margin-inline: auto;
@@ -37,7 +51,8 @@ header {
   align-items: center;
 }
 nav, footer, h1, h2, h3 {
-  font-family: 'Ships Whistle', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  font-family: 'Ships Whistle Rough', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+	font-feature-settings: 'ss01';
 }
 nav {
   margin-block-start: 0.25em;
@@ -48,9 +63,9 @@ nav {
   text-decoration: none;
 }
 #sitename {
-  font-family: 'Ships Whistle Italic';
+  font-family: 'Ships Whistle Italic Rough';
 	font-feature-settings: 'ss01';
-  font-size: clamp(2.75rem, 1rem + 5vw, 4rem);
+  font-size: clamp(3.5rem, 1rem + 5vw, 5rem);
   font-weight: 400;
   margin-block: 0;
 }
@@ -58,8 +73,11 @@ h1, h2, h3, b, strong {
   font-weight: 500;
 }
 h1, h2, h3 {
-  margin-block: 1.5em 0.5em;
+  margin-block: 1em 0.5em;
 }
+h1 { font-size: 2.5em }
+h2 { font-size: 2.0em }
+h3 { font-size: 1.5em }
 li {
   margin-block: 0.5em;
 }
@@ -71,4 +89,28 @@ iframe {
 footer {
   padding-inline: 0.5rem;
   text-align: end;
+}
+
+.word-art {
+  font-family: 'Ships Whistle Italic Rough';
+	font-feature-settings: 'ss01';
+  --divider: 5.5;
+  font-size: min(calc( 60ch / var(--divider) ), calc( 100vw / var(--divider) ));
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(in oklch longer hue 45deg, red 0 0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin-block: 0.25em;
+}
+.word-art:before {
+  position: absolute;
+  z-index: -1;
+  color: CanvasText;
+  content: "Whimsica11y";
+  width: inherit;
+  height: inherit;
+  transform: translateX(-0.4em) translateY(0.17em) skewX(50deg) scaleY(0.65);
+  opacity: 0.25;
+  filter: blur(0.03em);
 }
