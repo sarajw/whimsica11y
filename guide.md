@@ -3,9 +3,22 @@ title: Guide
 layout: whimsica11yLayout.html
 ---
 
-Coming soon... undecided how this bit will be structured
+Coming soon...
 
+Considering subsections or sub-pages:
+- Perceivable
+  - Responsive & zoomable
+  - Screen-readable
+  - Colors & contrasts
+- Operable
+  - Tabbing & focus
+- Understandable
+- Robust
+  - Performance
 
+Or another structure makes more sense? 🤔
+
+___ 
 
 ## Focus styles
 
