@@ -9,6 +9,7 @@ There are so many types and severities of disability. Lots of us have some level
 Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8sX9IEHWRJ8?si=bNwVbT_Olbg3eOOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+
 [Version of video with audio descriptions.](https://www.youtube-nocookie.com/embed/tVErGewfgdg?si=znzfw08vV1nFWVb7)
 
 <a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:
