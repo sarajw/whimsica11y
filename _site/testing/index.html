@@ -13,11 +13,11 @@
     <header>
   		<a id="skiplink" href="#content">Skip to Content</a>
       <a id="sitename" href="/">Whimsica11y</a>
-      <div id="switches" aria-label="color mode switches">
-        <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button>
-        <button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button>
-        <button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
-        <button id="hueSwitch" type="button" onclick="advanceHue()">Hue&ThinSpace;&gt;</button>
+      <div id="switches" aria-label="color mode changers">
+          <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button><button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button><button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
+        <div class="hue-slider">
+          <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="180">
+        </div>
       </div>
       <nav>
         <a href="/">home</a>
@@ -54,7 +54,7 @@
       const lightSwitch = document.querySelector('#lightSwitch');
       const darkSwitch = document.querySelector('#darkSwitch');
       const autoSwitch = document.querySelector('#autoSwitch');
-      const hueSwitch = document.querySelector('#hueSwitch');
+      const hueSlider = document.querySelector('#hueSlider');
       const mode = sessionStorage.getItem("mode");
       const hueMode = sessionStorage.getItem("hue");
 
@@ -80,19 +80,24 @@
         autoSwitch.setAttribute("aria-pressed","true");
       }
 
-      function advanceHue() {
-        const hue = html.style.getPropertyValue("--hue");
-        let newHue = Number(hue) + 36;
-        if (newHue >=360) {
-          newHue = newHue - 360;
-        }
-        hueSwitch.setAttribute("aria-pressed","true");
-        if (newHue == 180) {
-          hueSwitch.setAttribute("aria-pressed","false");
-        }
-        sessionStorage.setItem("hue", newHue);
-        html.style.setProperty("--hue", newHue);
-      }
+      // function advanceHue() {
+      //   const hue = html.style.getPropertyValue("--hue");
+      //   let newHue = Number(hue) + 36;
+      //   if (newHue >=360) {
+      //     newHue = newHue - 360;
+      //   }
+      //   hueSwitch.setAttribute("aria-pressed","true");
+      //   if (newHue == 180) {
+      //     hueSwitch.setAttribute("aria-pressed","false");
+      //   }
+      //   sessionStorage.setItem("hue", newHue);
+      //   html.style.setProperty("--hue", newHue);
+      // }
+      hueSlider.addEventListener("input", () =>
+      {
+        html.style.setProperty("--hue", hueSlider.value);
+        sessionStorage.setItem("hue", hueSlider.value);
+      });
 
       //check for session preferences
       if (mode) {
