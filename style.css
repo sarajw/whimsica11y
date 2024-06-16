@@ -119,6 +119,7 @@ button, .hue-slider {
   border: 1px solid var(--text);
   border-radius: 0.25em;
   margin: 0.1em;
+  color: inherit;
   background-color: Canvas;
   font-family: var(--display-font);
   font-size: 1.1em;

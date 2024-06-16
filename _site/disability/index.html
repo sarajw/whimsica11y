@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--hue: 180;">
+<html lang="en" style="--hue: 222;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
       <div id="switches" aria-label="color mode changers">
           <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button><button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button><button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
         <div class="hue-slider">
-          <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="180">
+          <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="222">
         </div>
       </div>
       <nav>
@@ -97,19 +97,6 @@
         autoSwitch.setAttribute("aria-pressed","true");
       }
 
-      // function advanceHue() {
-      //   const hue = html.style.getPropertyValue("--hue");
-      //   let newHue = Number(hue) + 36;
-      //   if (newHue >=360) {
-      //     newHue = newHue - 360;
-      //   }
-      //   hueSwitch.setAttribute("aria-pressed","true");
-      //   if (newHue == 180) {
-      //     hueSwitch.setAttribute("aria-pressed","false");
-      //   }
-      //   sessionStorage.setItem("hue", newHue);
-      //   html.style.setProperty("--hue", newHue);
-      // }
       hueSlider.addEventListener("input", () =>
       {
         html.style.setProperty("--hue", hueSlider.value);
