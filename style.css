@@ -32,6 +32,8 @@ html {
   --lightness: 50%;
   --chroma: 0.25;
   --theme: oklch(var(--lightness) var(--chroma) var(--hue));
+  --theme-plus-90: oklch(var(--lightness) var(--chroma) calc(var(--hue) + 90));
+  --theme-minus-90: oklch(var(--lightness) var(--chroma) calc(var(--hue) - 90));
   --invert-theme: oklch(var(--lightness) var(--chroma) calc(var(--hue) + 180));
   --theme-strength: 12.5%;
   --accent-color: oklch(50% 0.2 var(--hue));
@@ -156,7 +158,7 @@ footer {
   font-size: min(calc( 60ch / var(--divider) ), calc( 100vw / var(--divider) ));
   text-align: center;
   color: transparent;
-  background: linear-gradient(in oklch longer hue 45deg, var(--theme), var(--theme));
+  background: linear-gradient(45deg, var(--theme), var(--theme-plus-90), var(--invert-theme), var(--theme-minus-90), var(--theme));
   background-clip: text;
   -webkit-background-clip: text;
   margin-block: 0.25em;
