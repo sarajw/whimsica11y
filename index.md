@@ -10,6 +10,8 @@ Web accessibility guides and advice online are heavily geared towards businesses
 
 <p class="word-art" aria-hidden="true">Whimsica11y</p>
 
+Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whimsy.
+
 ## Web Content Accessibility Guidelines
 The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.
 
