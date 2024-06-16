@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Whimsica11y | Links</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
     <link rel="me" href="https://front-end.social/@sarajw">
@@ -10,7 +11,13 @@
   </head>
   <body>
     <header>
+  		<a id="skiplink" href="#content">Skip to Content</a>
       <a id="sitename" href="/">Whimsica11y</a>
+      <div>
+        <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button>
+        <button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button>
+        <button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
+      </div>
       <nav>
         <a href="/">home</a>
         <a href="/disability">disability</a>
@@ -19,16 +26,71 @@
         <a href="/links">links</a>
       </nav>
     </header>
-    <main>
-      <p><a href="https://a11yphant.com/">a11yphant</a> teaches web accessibility, one step at a time, broken down into manageable pieces. Completely free of charge.</p>
-<p><a href="https://solaria.neocities.org/accessibility">Web Accessibility by Solaria</a> - What I've Learned About Web Accessibility as a Dyslexic, Sighted, Mouse User</p>
-<p>Learn the Web's <a href="https://learntheweb.courses/topics/html-semantics-cheat-sheet/">HTML semantics cheat sheet</a></p>
-<p><a href="https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-natural-responsiveness">Natural Responsiveness</a>, an article by <a href="https://www.theodinproject.com/">The Odin Project</a>. Their full stack curriculum is free and supported by a passionate open source community.</p>
-<p><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-1">Learn Accessibility by Building a Quiz</a>, part of FreeCodeCamp's <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">Responsive Web Design Certification</a></p>
+    <main id="content">
+      <h1 id="links-for-further-reading">Links for Further Reading</h1>
+<p>Want more? Here's more!</p>
+<h2 id="interactive-amp-courses">Interactive &amp; Courses</h2>
+<ul>
+<li><a href="https://a11yphant.com/">a11yphant</a> teaches web accessibility, one step at a time, broken down into manageable pieces. Completely free of charge.</li>
+<li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-1">Learn Accessibility by Building a Quiz</a>, part of FreeCodeCamp's <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">Responsive Web Design Certification</a></li>
+</ul>
+<h2 id="guides-amp-checklists">Guides &amp; Checklists</h2>
+<ul>
+<li><a href="https://solaria.neocities.org/accessibility">Web Accessibility by Solaria</a> - What I've Learned About Web Accessibility as a Dyslexic, Sighted, Mouse User</li>
+<li>Learn the Web's <a href="https://learntheweb.courses/topics/html-semantics-cheat-sheet/">HTML semantics cheat sheet</a></li>
+<li><a href="https://www.getstark.co/wcag-explained/">The WCAG Explained</a> - Simplified and actionable explanations of every WCAG 2.2 criteria</li>
+<li><a href="https://www.magentaa11y.com/web/">MagentaA11y's Web accessibility checklist</a> - Choose components to define your accessibility success criteria</li>
+</ul>
+<h2 id="blogs-amp-articles">Blogs &amp; Articles</h2>
+<ul>
+<li><a href="https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-natural-responsiveness">Natural Responsiveness</a>, an article by <a href="https://www.theodinproject.com/">The Odin Project</a>. Their full stack curriculum is free and supported by a passionate open source community.</li>
+<li>By <a href="https://hidde.blog/">Hidde</a>, an accessibility nerd, front-end developer, components enthusiast, web standards fan and tech ethics explorer:
+<ul>
+<li><a href="https://hidde.blog/common-a11y-issues/">Common accessibility issues that you can fix today</a></li>
+<li><a href="https://hidde.blog/more-common-a11y-issues/">More common accessibility issues that you can fix today</a></li>
+</ul>
+</li>
+</ul>
 
     </main>
     <footer>
       <p>made with joy by <a href="https://sarajoy.dev">Sara</a> :)</p>
     </footer>
+    <script>
+      const colorScheme = document.querySelector('meta[name="color-scheme"]');
+      const lightSwitch = document.querySelector('#lightSwitch');
+      const darkSwitch = document.querySelector('#darkSwitch');
+      const autoSwitch = document.querySelector('#autoSwitch');
+      const mode = sessionStorage.getItem("mode");
+
+      function switchDark() {
+        colorScheme.setAttribute("content", "dark");
+        sessionStorage.setItem("mode", "dark");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","true");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchLight() {
+        colorScheme.setAttribute("content", "light");
+        sessionStorage.setItem("mode", "light");
+        lightSwitch.setAttribute("aria-pressed","true");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchAuto() {
+        colorScheme.setAttribute("content", "light dark");
+        sessionStorage.removeItem("mode");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","true");
+      }
+
+      //check for session preferences
+      if (mode) {
+        if (mode === "dark") {switchDark();}
+        else if (mode === "light") {switchLight();}
+        console.log(mode)
+      }
+    </script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Whimsica11y | Disability</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
     <link rel="me" href="https://front-end.social/@sarajw">
@@ -10,7 +11,13 @@
   </head>
   <body>
     <header>
+  		<a id="skiplink" href="#content">Skip to Content</a>
       <a id="sitename" href="/">Whimsica11y</a>
+      <div>
+        <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button>
+        <button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button>
+        <button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
+      </div>
       <nav>
         <a href="/">home</a>
         <a href="/disability">disability</a>
@@ -19,11 +26,12 @@
         <a href="/links">links</a>
       </nav>
     </header>
-    <main>
+    <main id="content">
       <h1 id="disability">Disability</h1>
 <p>There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web!</p>
 <p>Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.</p>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8sX9IEHWRJ8?si=bNwVbT_Olbg3eOOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8sX9IEHWRJ8?si=bNwVbT_Olbg3eOOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<p><a href="https://www.youtube-nocookie.com/embed/tVErGewfgdg?si=znzfw08vV1nFWVb7">Version of video with audio descriptions.</a></p>
 <p><a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:</p>
 <blockquote>
 <p><q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for <strong>blindness</strong> and <strong>low vision</strong>, <strong>deafness</strong> and <strong>hearing loss</strong>, <strong>limited movement</strong>, <strong>speech disabilities</strong>, <strong>photosensitivity</strong>, and combinations of these, and some accommodation for <strong>learning disabilities</strong> and <strong>cognitive limitations</strong>; but will not address every user need for people with these disabilities.</q></p>
@@ -56,5 +64,41 @@
     <footer>
       <p>made with joy by <a href="https://sarajoy.dev">Sara</a> :)</p>
     </footer>
+    <script>
+      const colorScheme = document.querySelector('meta[name="color-scheme"]');
+      const lightSwitch = document.querySelector('#lightSwitch');
+      const darkSwitch = document.querySelector('#darkSwitch');
+      const autoSwitch = document.querySelector('#autoSwitch');
+      const mode = sessionStorage.getItem("mode");
+
+      function switchDark() {
+        colorScheme.setAttribute("content", "dark");
+        sessionStorage.setItem("mode", "dark");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","true");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchLight() {
+        colorScheme.setAttribute("content", "light");
+        sessionStorage.setItem("mode", "light");
+        lightSwitch.setAttribute("aria-pressed","true");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchAuto() {
+        colorScheme.setAttribute("content", "light dark");
+        sessionStorage.removeItem("mode");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","true");
+      }
+
+      //check for session preferences
+      if (mode) {
+        if (mode === "dark") {switchDark();}
+        else if (mode === "light") {switchLight();}
+        console.log(mode)
+      }
+    </script>
   </body>
 </html>

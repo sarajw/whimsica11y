@@ -27,12 +27,23 @@
 }
 
 html {
-  color-scheme: light dark;
+  --hue: 200;
+  --saturation: 75%;
+  --lightness: 50%;
+  --theme: hsl(var(--hue), var(--saturation), var(--lightness));
+  --invert-theme: hsl(calc(var(--hue) + 180), var(--saturation), var(--lightness));
+  --theme-strength: 18%;
+  --text: color-mix(in srgb, var(--theme) var(--theme-strength), CanvasText);
+  --link: color-mix(in srgb, var(--invert-theme) 50%, CanvasText);
+  --vlink: color-mix(in srgb, var(--invert-theme) 25%, CanvasText);
+  --alink: color-mix(in srgb, var(--invert-theme) 75%, CanvasText);
+  --background: color-mix(in srgb, var(--theme) var(--theme-strength), Canvas);
+  --display-font: 'Ships Whistle Rough', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 body {
   font-family: system-ui, sans-serif;
-  color: color-mix(in srgb, Canvas 10%, CanvasText);
-  background-color: color-mix(in srgb, Canvas 90%, CanvasText);
+  color: var(--text);
+  background-color: var(--background);
 }
 main {
   font-size: clamp(0.9rem, 1rem + 0.5vw, 1.2rem);
@@ -50,13 +61,17 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-nav, footer, h1, h2, h3 {
-  font-family: 'Ships Whistle Rough', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
-	font-feature-settings: 'ss01';
+#skiplink {
+	position: absolute;
+  top: 1em;
+  left: 1em;
+	padding: 0.25em;
+	scale: 0;
+	background-color: var(--background);
 }
-nav {
-  margin-block-start: 0.25em;
-  font-size: clamp(1.4rem, 1rem + 1vw, 2rem);
+#skiplink:focus-visible {
+	scale: 1;
+	transition: scale 0.25s ease;
 }
 #sitename, nav a:not(:hover, :focus, :focus-visible) {
   color: inherit;
@@ -69,6 +84,24 @@ nav {
   font-weight: 400;
   margin-block: 0;
 }
+nav, footer, h1, h2, h3 {
+  font-family: var(--display-font);
+	font-feature-settings: 'ss01';
+}
+nav {
+  margin-block-start: 0.25em;
+  font-size: clamp(1.4rem, 1rem + 1vw, 2rem);
+}
+button {
+  border: 1px solid var(--text);
+  border-radius: 0.25em;
+  padding: 0.1em 0.3em;
+  background-color: Canvas;
+  font-family: var(--display-font);
+  font-size: 1.1em;
+}
+button:hover, header button[aria-pressed="true"] { color:var(--link) }
+button:active { translate: 1px 1px }
 h1, h2, h3, b, strong {
   font-weight: 500;
 }
@@ -78,9 +111,10 @@ h1, h2, h3 {
 h1 { font-size: 2.5em }
 h2 { font-size: 2.0em }
 h3 { font-size: 1.5em }
-li {
-  margin-block: 0.5em;
-}
+li { margin-block: 0.5em }
+a:link { color: var(--link) }
+a:visited { color: var(--vlink) }
+a:hover, a:active { color: var(--alink) }
 iframe {
   display: block;
   margin: 2rem auto;

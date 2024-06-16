@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Whimsica11y | Home</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
     <link rel="me" href="https://front-end.social/@sarajw">
@@ -10,7 +11,13 @@
   </head>
   <body>
     <header>
+  		<a id="skiplink" href="#content">Skip to Content</a>
       <a id="sitename" href="/">Whimsica11y</a>
+      <div>
+        <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button>
+        <button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button>
+        <button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
+      </div>
       <nav>
         <a href="/">home</a>
         <a href="/disability">disability</a>
@@ -19,7 +26,7 @@
         <a href="/links">links</a>
       </nav>
     </header>
-    <main>
+    <main id="content">
       <h1 id="welcome-to-web-accessibility">Welcome to Web Accessibility</h1>
 <p>Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)</p>
 <p>Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.</p>
@@ -67,5 +74,41 @@
     <footer>
       <p>made with joy by <a href="https://sarajoy.dev">Sara</a> :)</p>
     </footer>
+    <script>
+      const colorScheme = document.querySelector('meta[name="color-scheme"]');
+      const lightSwitch = document.querySelector('#lightSwitch');
+      const darkSwitch = document.querySelector('#darkSwitch');
+      const autoSwitch = document.querySelector('#autoSwitch');
+      const mode = sessionStorage.getItem("mode");
+
+      function switchDark() {
+        colorScheme.setAttribute("content", "dark");
+        sessionStorage.setItem("mode", "dark");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","true");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchLight() {
+        colorScheme.setAttribute("content", "light");
+        sessionStorage.setItem("mode", "light");
+        lightSwitch.setAttribute("aria-pressed","true");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","false");
+      }
+      function switchAuto() {
+        colorScheme.setAttribute("content", "light dark");
+        sessionStorage.removeItem("mode");
+        lightSwitch.setAttribute("aria-pressed","false");
+        darkSwitch.setAttribute("aria-pressed","false");
+        autoSwitch.setAttribute("aria-pressed","true");
+      }
+
+      //check for session preferences
+      if (mode) {
+        if (mode === "dark") {switchDark();}
+        else if (mode === "light") {switchLight();}
+        console.log(mode)
+      }
+    </script>
   </body>
 </html>
