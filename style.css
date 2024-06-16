@@ -91,6 +91,15 @@ nav {
   margin-block-start: 0.25em;
   font-size: clamp(1.4rem, 1rem + 1vw, 2rem);
 }
+#switches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25em;
+
+  @media (max-width: 425px) {
+    display: flex;
+  }
+}
 button {
   border: 1px solid var(--text);
   border-radius: 0.25em;
@@ -99,7 +108,7 @@ button {
   font-family: var(--display-font);
   font-size: 1.1em;
 }
-button:hover, header button[aria-pressed="true"] { color:var(--link) }
+button:hover, #switches button[aria-pressed="true"], html:not([style="--hue: 180;"]) button[id="hueSwitch"] { color:var(--link) }
 button:active { translate: 1px 1px }
 h1, h2, h3, b, strong {
   font-weight: 500;
