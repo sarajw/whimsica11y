@@ -54,6 +54,7 @@
       const lightSwitch = document.querySelector('#lightSwitch');
       const darkSwitch = document.querySelector('#darkSwitch');
       const autoSwitch = document.querySelector('#autoSwitch');
+      const hueSwitch = document.querySelector('#hueSwitch');
       const mode = sessionStorage.getItem("mode");
       const hueMode = sessionStorage.getItem("hue");
 
@@ -84,6 +85,10 @@
         let newHue = Number(hue) + 36;
         if (newHue >=360) {
           newHue = newHue - 360;
+        }
+        hueSwitch.setAttribute("aria-pressed","true");
+        if (newHue == 180) {
+          hueSwitch.setAttribute("aria-pressed","false");
         }
         sessionStorage.setItem("hue", newHue);
         html.style.setProperty("--hue", newHue);

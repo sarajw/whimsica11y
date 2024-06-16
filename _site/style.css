@@ -108,7 +108,7 @@ button {
   font-family: var(--display-font);
   font-size: 1.1em;
 }
-button:hover, #switches button[aria-pressed="true"], html:not([style="--hue: 180;"]) button[id="hueSwitch"] { color:var(--link) }
+button:hover, #switches button[aria-pressed="true"] { color:var(--link) }
 button:active { translate: 1px 1px }
 h1, h2, h3, b, strong {
   font-weight: 500;
