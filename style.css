@@ -27,12 +27,11 @@
 }
 
 html {
-  --hue: 200;
   --saturation: 75%;
   --lightness: 50%;
   --theme: hsl(var(--hue), var(--saturation), var(--lightness));
   --invert-theme: hsl(calc(var(--hue) + 180), var(--saturation), var(--lightness));
-  --theme-strength: 18%;
+  --theme-strength: 15%;
   --text: color-mix(in srgb, var(--theme) var(--theme-strength), CanvasText);
   --link: color-mix(in srgb, var(--invert-theme) 50%, CanvasText);
   --vlink: color-mix(in srgb, var(--invert-theme) 25%, CanvasText);
@@ -132,7 +131,7 @@ footer {
   font-size: min(calc( 60ch / var(--divider) ), calc( 100vw / var(--divider) ));
   text-align: center;
   color: transparent;
-  background: linear-gradient(in oklch longer hue 45deg, red 0 0);
+  background: linear-gradient(in hsl longer hue 45deg, var(--theme), var(--theme));
   background-clip: text;
   -webkit-background-clip: text;
   margin-block: 0.25em;
