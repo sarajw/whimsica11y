@@ -53,7 +53,7 @@ body {
 main {
   font-size: clamp(0.9rem, 1rem + 0.5vw, 1.2rem);
   line-height: 1.4;
-  width: min(calc(100% - 1rem), 60ch);
+  width: min(calc(100% - 1rem), 65ch);
   margin-inline: auto;
 }
 header, nav {
@@ -67,16 +67,16 @@ header {
   align-items: center;
 }
 #skiplink {
-	position: absolute;
+  position: absolute;
   top: 1em;
   left: 1em;
-	padding: 0.25em;
-	scale: 0;
-	background-color: var(--background);
+  padding: 0.25em;
+  scale: 0;
+  background-color: var(--background);
 }
 #skiplink:focus-visible {
-	scale: 1;
-	transition: scale 0.25s ease;
+  scale: 1;
+  transition: scale 0.25s ease;
 }
 #sitename, nav a:not(:hover, :focus, :focus-visible) {
   color: inherit;
@@ -84,7 +84,7 @@ header {
 }
 #sitename {
   font-family: 'Ships Whistle Italic Rough';
-	font-feature-settings: 'ss01';
+  font-feature-settings: 'ss01';
   font-size: clamp(3.5rem, 1rem + 5vw, 5rem);
   font-weight: 400;
   margin-block: 0;
@@ -128,8 +128,9 @@ button, .hue-slider, .notice {
 button:hover, #switches button[aria-pressed="true"] { color:var(--link) }
 button:active { translate: 1px 1px }
 .notice {
-  margin-inline: 1rem;
-  padding: 1em;
+  margin-inline: auto;
+  padding: 0.5em;
+  max-width: 40ch;
 }
 h1, h2, h3, b, strong {
   font-weight: 500;
