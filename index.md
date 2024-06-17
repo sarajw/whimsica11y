@@ -5,11 +5,11 @@ layout: whimsica11yLayout.html
 
 # Welcome to Web Accessibility
 
+Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)
+
 <p class="notice">This website is being "built in public" and is still very much 🏗️ under construction 🚧
 <br><br>
 If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a> :)</p>
-
-Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)
 
 Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.
 
