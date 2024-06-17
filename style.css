@@ -45,13 +45,13 @@ html {
   --display-font: 'Ships Whistle Rough', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 body {
-  font-family: system-ui, sans-serif;
+  font-family: Georgia, serif;
   color: var(--text);
   background-color: var(--background);
   accent-color: var(--accent-color);
 }
 main {
-  font-size: clamp(0.9rem, 1rem + 0.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 1rem + 0.5vw, 1.1rem);
   line-height: 1.4;
   width: min(calc(100% - 1rem), 65ch);
   margin-inline: auto;
@@ -129,7 +129,7 @@ button:hover, #switches button[aria-pressed="true"] { color:var(--link) }
 button:active { translate: 1px 1px }
 .notice {
   margin-inline: auto;
-  padding: 0.5em;
+  padding: 0.5em 0.75em;
   max-width: 40ch;
 }
 h1, h2, h3, b, strong {
