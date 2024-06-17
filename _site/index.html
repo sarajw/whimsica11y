@@ -17,7 +17,7 @@
           <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button><button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button><button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
         <div class="hue-slider">
           <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="222">
-        </div>
+        </div><button id="monoSwitch" aria-pressed="false" type="button" onclick="toggleMono()">Mono</button>
       </div>
       <nav>
         <a href="/">home</a>
@@ -30,6 +30,9 @@
     <main id="content">
       <h1 id="welcome-to-web-accessibility">Welcome to Web Accessibility</h1>
 <p>Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)</p>
+<p class="notice">This website is being "built in public" and is still very much 🏗️ under construction 🚧
+<br><br>
+If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a> :)</p>
 <p>Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.</p>
 <p class="word-art" aria-hidden="true">Whimsica11y</p>
 <p>Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whimsy.</p>
@@ -82,9 +85,11 @@
       const lightSwitch = document.querySelector('#lightSwitch');
       const darkSwitch = document.querySelector('#darkSwitch');
       const autoSwitch = document.querySelector('#autoSwitch');
+      const monoSwitch = document.querySelector('#monoSwitch');
       const hueSlider = document.querySelector('#hueSlider');
       const mode = sessionStorage.getItem("mode");
       const hueMode = sessionStorage.getItem("hue");
+      let mono = sessionStorage.getItem("mono");
 
       function switchDark() {
         colorScheme.setAttribute("content", "dark");
@@ -107,6 +112,21 @@
         darkSwitch.setAttribute("aria-pressed","false");
         autoSwitch.setAttribute("aria-pressed","true");
       }
+      function toMono() {
+        sessionStorage.setItem("mono", "true");
+        monoSwitch.setAttribute("aria-pressed","true");
+        html.classList.add("mono");
+      }
+      function fromMono() {
+        sessionStorage.removeItem("mono");
+        monoSwitch.setAttribute("aria-pressed","false");
+        html.classList.remove("mono");
+      }
+      function toggleMono() {
+        mono = sessionStorage.getItem("mono");
+        if (mono) { fromMono(); }
+        else { toMono(); }
+      }
 
       hueSlider.addEventListener("input", () =>
       {
@@ -118,6 +138,9 @@
       if (mode) {
         if (mode === "dark") {switchDark();}
         else if (mode === "light") {switchLight();}
+      }
+      if (mono) {
+        toMono();
       }
       if (hueMode) {
         html.style.setProperty("--hue", hueMode);

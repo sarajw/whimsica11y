@@ -17,7 +17,7 @@
           <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button><button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button><button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
         <div class="hue-slider">
           <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="222">
-        </div>
+        </div><button id="monoSwitch" aria-pressed="false" type="button" onclick="toggleMono()">Mono</button>
       </div>
       <nav>
         <a href="/">home</a>
@@ -54,9 +54,11 @@
       const lightSwitch = document.querySelector('#lightSwitch');
       const darkSwitch = document.querySelector('#darkSwitch');
       const autoSwitch = document.querySelector('#autoSwitch');
+      const monoSwitch = document.querySelector('#monoSwitch');
       const hueSlider = document.querySelector('#hueSlider');
       const mode = sessionStorage.getItem("mode");
       const hueMode = sessionStorage.getItem("hue");
+      let mono = sessionStorage.getItem("mono");
 
       function switchDark() {
         colorScheme.setAttribute("content", "dark");
@@ -79,6 +81,21 @@
         darkSwitch.setAttribute("aria-pressed","false");
         autoSwitch.setAttribute("aria-pressed","true");
       }
+      function toMono() {
+        sessionStorage.setItem("mono", "true");
+        monoSwitch.setAttribute("aria-pressed","true");
+        html.classList.add("mono");
+      }
+      function fromMono() {
+        sessionStorage.removeItem("mono");
+        monoSwitch.setAttribute("aria-pressed","false");
+        html.classList.remove("mono");
+      }
+      function toggleMono() {
+        mono = sessionStorage.getItem("mono");
+        if (mono) { fromMono(); }
+        else { toMono(); }
+      }
 
       hueSlider.addEventListener("input", () =>
       {
@@ -90,6 +107,9 @@
       if (mode) {
         if (mode === "dark") {switchDark();}
         else if (mode === "light") {switchLight();}
+      }
+      if (mono) {
+        toMono();
       }
       if (hueMode) {
         html.style.setProperty("--hue", hueMode);
