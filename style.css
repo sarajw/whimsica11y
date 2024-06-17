@@ -111,13 +111,12 @@ nav {
   display: flex;
   justify-content: space-between;
   grid-column: 1 / span 3;
-  padding-block: 1px;
-  padding-inline: 6px;
+  padding: 1px 6px;
 }
 #hueSlider {
   max-width: 8em;
 }
-button, .hue-slider {
+button, .hue-slider, .notice {
   border: 1px solid var(--text);
   border-radius: 0.25em;
   margin: 0.1em;
@@ -128,6 +127,10 @@ button, .hue-slider {
 }
 button:hover, #switches button[aria-pressed="true"] { color:var(--link) }
 button:active { translate: 1px 1px }
+.notice {
+  margin-inline: 1rem;
+  padding: 1em;
+}
 h1, h2, h3, b, strong {
   font-weight: 500;
 }
