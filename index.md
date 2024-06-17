@@ -2,6 +2,11 @@
 title: Home
 layout: whimsica11yLayout.html
 ---
+
+<p class="notice">This website is being "built in public" and is still very much 🏗️ under construction 🚧
+<br><br>
+If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a> :)</p>
+
 # Welcome to Web Accessibility
 
 Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)
