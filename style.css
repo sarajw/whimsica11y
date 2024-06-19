@@ -131,9 +131,13 @@ button, .hue-slider, .notice {
   font-family: var(--display-font);
   font-size: 1.1em;
 }
-button:hover, #switches button[aria-pressed="true"] {
+#switches button[aria-pressed="true"] {
   color: var(--background);
   background-color: var(--text);
+}
+button:hover {
+  color: CanvasText;
+  background-color: Canvas;
 }
 button:active { translate: 1px 1px }
 .notice {
