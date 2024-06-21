@@ -45,7 +45,7 @@ html {
   --alink: color-mix(in srgb, var(--invert-theme) 60%, CanvasText);
   --display-font: 'Ships Whistle Rough', ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
-  font-family: Georgia, serif;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   color: var(--text);
   background-color: var(--background);
   accent-color: var(--accent-color);
