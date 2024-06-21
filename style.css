@@ -135,7 +135,7 @@ button, .hue-slider, .notice {
   color: var(--background);
   background-color: var(--text);
 }
-button:hover {
+button:hover, .notice {
   color: CanvasText;
   background-color: Canvas;
 }
