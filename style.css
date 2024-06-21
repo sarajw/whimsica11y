@@ -97,7 +97,7 @@ header {
 }
 nav, footer, h1, h2, h3 {
   font-family: var(--display-font);
-	font-feature-settings: 'ss01';
+  font-feature-settings: 'ss01';
 }
 nav {
   margin-block-start: 0.25em;
@@ -145,10 +145,8 @@ button:active { translate: 1px 1px }
   padding: 0.5em 0.75em;
   max-width: 40ch;
 }
-h1, h2, h3, b, strong {
-  font-weight: 500;
-}
 h1, h2, h3 {
+  font-weight: normal;
   margin-block: 1em 0.5em;
 }
 h1 { font-size: 2.5em }
