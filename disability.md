@@ -15,7 +15,7 @@ Having some idea of these disabilities and the assistive tech or browser feature
 <a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:
 > <q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for **blindness** and **low vision**, **deafness** and **hearing loss**, **limited movement**, **speech disabilities**, **photosensitivity**, and combinations of these, and some accommodation for **learning disabilities** and **cognitive limitations**; but will not address every user need for people with these disabilities.</q>
 
-Yes, it's imperfect (aren't we all), but achievable! In order to understand better how we can help people with disabilities, it may help to know the different ways in which we use the web.
+Yes, it's imperfect (aren't we all), but achievable! In order to understand better how we can include people with disabilities, it may help to know the different ways in which we use the web.
 
 ## Adaptive strategies
 
