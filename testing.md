@@ -26,6 +26,7 @@ If you run Windows, NVDA (free) and JAWS (free trial allows 40-min sessions) are
 ## Dev tools
 
 ### Accessibility tree
+In Chrome, Firefox & other extensions: https://www.a11yproject.com/posts/using-firefox-for-accessibility-testing/
 
 ### Turning off CSS and JS
 
