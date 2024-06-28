@@ -41,4 +41,5 @@ Examples of these include:
 
 
 ## Further reading
-<a href="https://www.w3.org/WAI/people/">Accessibility: It’s About People</a>
+- <a href="https://www.w3.org/WAI/people/">Accessibility: It’s About People</a>
+- [Assistive Technology in Action](https://youtube.com/playlist?list=PLMe9zDtTPTVe62Gb6b9Dkk_IPBUTGQHoD) (a YouTube playlist)
