@@ -22,3 +22,8 @@ Want more? Here's more!
 - By [Hidde](https://hidde.blog/), an accessibility nerd, front-end developer, components enthusiast, web standards fan and tech ethics explorer:
   - [Common accessibility issues that you can fix today](https://hidde.blog/common-a11y-issues/)
   - [More common accessibility issues that you can fix today](https://hidde.blog/more-common-a11y-issues/)
+
+## Reference & Resources
+- [Inclusive Design Principles](https://inclusivedesignprinciples.info/)
+- [The W3C WAI Accessibility Fundamentals](https://www.w3.org/WAI/fundamentals/)
+- [The A11y Project](https://www.a11yproject.com/)
