@@ -28,33 +28,28 @@
       </nav>
     </header>
     <main id="content">
-      <p>Coming soon...</p>
-<p>Considering subsections or sub-pages:</p>
-<ul>
-<li>Perceivable
-<ul>
-<li>Responsive &amp; zoomable</li>
-<li>Screen-readable</li>
-<li>Colors &amp; contrasts</li>
-</ul>
-</li>
-<li>Operable
-<ul>
-<li>Tabbing &amp; focus</li>
-</ul>
-</li>
-<li>Understandable</li>
-<li>Robust
-<ul>
-<li>Performance</li>
-</ul>
-</li>
-</ul>
-<p>Or another structure makes more sense? 🤔</p>
-<hr>
-<h2 id="focus-styles">Focus styles</h2>
-<p>When a sighted visitor can't use a mouse or other pointing device, they will scroll the page with (emulated, maybe) keyboard keys, and use the tab key to move between links, inputs and buttons.</p>
-<p>If the focus styles aren't present (some should be there by default but they can be removed), then there's no indication to the user on which interactive element they have landed. The default focus style is a ring or rounded box around the focusable element. it's often blue, and made with CSS property <code>outline:</code></p>
+      <h1 id="a-whimsical-guide-to-the-guidelines">A Whimsical Guide to the Guidelines</h1>
+<p>More coming soon...</p>
+<h2 id="perceivable">Perceivable</h2>
+<h3 id="visual">Visual</h3>
+<h4 id="responsive-amp-zoomable">Responsive &amp; zoomable</h4>
+<h4 id="colors-amp-contrasts">Colors &amp; contrasts</h4>
+<h3 id="audible-amp-tactile">Audible &amp; Tactile</h3>
+<h4 id="screen-readable">Screen-readable</h4>
+<h2 id="operable">Operable</h2>
+<h3 id="tabbing-amp-focus">Tabbing &amp; focus</h3>
+<h4 id="focus-styles">Focus styles</h4>
+<p>Like someone with a visual impairment using a screen reader, a sighted visitor that can't use a mouse or other pointing device will scroll the page with keyboard keys (or other assistive tech that emulates keyboard signals), and use the tab key to move between links, inputs and buttons.</p>
+<p>If the focus styles aren't there (some should be, by default, but they can be removed), then there's no visible indication on which interactive element they have landed. A sighted person will likely not be using a screen reader that would otherwise announce the element to them.</p>
+<p>The default focus style is a ring or rounded box around the focusable element. It's often blue, and made with CSS property <code>outline:</code></p>
+<p><a href="https://www.sarasoueidan.com/">Sara Soueidan</a>'s deep-dive article on <a href="https://www.sarasoueidan.com/blog/focus-indicators/">accessible focus indicators</a> is so good if you want to know the very best way to style your own.</p>
+<p>Otherwise, the best bet is to make sure you haven't removed <code>outline:</code> anywhere in your CSS, so that the browsers can do the thing when they need to!</p>
+<h2 id="understandable">Understandable</h2>
+<h3 id="simple-language">Simple language</h3>
+<h3 id="website-flow">Website 'flow'</h3>
+<h2 id="robust">Robust</h2>
+<h3 id="performance">Performance</h3>
+<h3 id="cross-browser-compatibility">Cross-browser compatibility</h3>
 
     </main>
     <footer>

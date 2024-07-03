@@ -5,11 +5,14 @@ layout: whimsica11yLayout.html
 
 # Welcome to Web Accessibility
 
-Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)
+Hey, want your homepage to be more inclusive? We'd like to help you with that :)
 
-<p class="notice">This website is being "built in public" and is still very much 🏗️ under construction 🚧
+<p class="notice">
+This website is being "built in public" and is still very much
+<br>🏗️ <em>Under Construction</em> 🚧
 <br><br>
-If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a> :)</p>
+If you have ideas or suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a>
+</p>
 
 Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.
 
@@ -17,22 +20,34 @@ Web accessibility guides and advice online are heavily geared towards businesses
 
 Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whimsy.
 
-## Web Content Accessibility Guidelines
+## The Web Content Accessibility Guidelines (WCAG) Principles
+
+The WCAG principles form the acronym **"POUR"**, and state that a site should be **Perceivable**, **Operable**, **Understandable** and **Robust**:
+
+- _Perceivable_: Users are able to perceive the content, using one or more of their senses.
+- _Operable_: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).
+- _Understandable_: The content is understandable to its users.
+- _Robust_: The content is built with web standards that work across different browsers, now and in the future.
+
+These **P.O.U.R.** principles are at the root of the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?
+
+## WCAG Documentation
 The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.
 
-They're available for everyone to read. It's worth trying if you would like some dense bedtime reading! There is a lot to chew through though, so I would recommend it more as a reference. When something seems unclear in any accessibility advice you've read, go search for the issue you're concerned about and see if it clears it up for you:
+The guidelines are available for everyone to read. They're worth perusing if you would like some extremely dense bedtime reading! There is a lot to chew through though, so I would recommend using it more as a reference. When something seems unclear in accessibility advice you've read, you can go search for the issue you're concerned about and see if it clears it up for you:
 
 [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 
+<p class="notice">
+<em>A Gentle Warning !</em>
+<br>If you think the WCAG is sort of inaccessible and hard to get into, you'd be right. It's a bit of an irony, and a beast of a document. I'm linking it here because you should be able to fnd it easily - but if it puts you off, don't worry!
+</P>
+
+A much friendlier introduction can be found at the W3C's Web Accessibility Initiative (WAI)'s [Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/).
+
 Here we'll take it bit by bit, and try to apply its principles to our homepages.
 
-## The WCAG Principles
-- **Perceivable**: Users are able to perceive the content, using one or more of their senses.
-- **Operable**: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).
-- **Understandable**: The content is understandable to its users.
-- **Robust**: The content is built with web standards that work across different browsers, now and in the future.
-
-These P.O.U.R. principles are the roots of all the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?
+For more on these principles, please see the [guide](/guide) page, and the [testing](/testing) page to help you find issues on your own site :)
 
 ## WCAG and the Smol / Indie / Revival Web
 
@@ -61,11 +76,6 @@ As an example, an image that might be purely decorative on a corporate website (
 
 Personality may also come through via audio. Some actions on your site could trigger sounds. Blog posts could be recorded in audio, maybe as a podcast. Why not?
 
-## Here's a little of what I hope to cover:
-- Disability spectrum
-- Semantic HTML
-- Image ALT text
-- Focusable elements
-- Responsive (zoomable) design
-- Colors and contrast
-- Using dev tools
+## Welcome to Whimsically!
+
+Please browse around, and please do feel free to [contact me](https://sarajoy.dev/#find) with any suggestions and questions!

@@ -9,15 +9,15 @@ This is a tricky thing, as most of us don't personally have a Braille display, a
 
 ## Tabbing
 
-Just hit that tab key! Watch it jump between any links and buttons you have in your page. 
+Just hit that tab key! Watch it jump between any inputs, links or buttons you have in your page. 
 
 Check that the tabbing order makes sense, and that everything you want a person to be able to activate or give input to is available in the tabbing order.
 
-Can't see anything change? You have tabs and links but nothing is happening? It might be your LINK TO FOCUS STYLES
+Can't see anything change? You have tabs and links but nothing is happening? It might be your [focus styles](/guide/#focus-styles) need some attention.
 
 ## Screen readers
 
-We can of course install screen readers (SRs), but they do have a learning curve, and even a very experienced sighted accessibility consultant won't use them quite like a blind person will.
+We can of course install screen readers (SRs), but they do have a learning curve, and even an experienced sighted accessibility consultant won't use them quite like a blind person will.
 
 That said, it's worth a try to fire up either the built-in SR in your operating system (VoiceOver for MacOS, Narrator for Windows, and Orca is available for Linux), look up its keyboard controls and have a listen to what it says and how it progresses down the page.
 

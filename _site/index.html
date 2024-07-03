@@ -29,26 +29,36 @@
     </header>
     <main id="content">
       <h1 id="welcome-to-web-accessibility">Welcome to Web Accessibility</h1>
-<p>Hey, so you want your homepage to be more inclusive? We'd like to help you with that :)</p>
-<p class="notice">This website is being "built in public" and is still very much 🏗️ under construction 🚧
+<p>Hey, want your homepage to be more inclusive? We'd like to help you with that :)</p>
+<p class="notice">
+This website is being "built in public" and is still very much
+<br>🏗️ <em>Under Construction</em> 🚧
 <br><br>
-If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a> :)</p>
+If you have ideas or suggestions, feel free to <a href="https://sarajoy.dev/#form">contact me</a>
+</p>
 <p>Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.</p>
 <p class="word-art" aria-hidden="true">Whimsica11y</p>
 <p>Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whimsy.</p>
-<h2 id="web-content-accessibility-guidelines">Web Content Accessibility Guidelines</h2>
-<p>The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.</p>
-<p>They're available for everyone to read. It's worth trying if you would like some dense bedtime reading! There is a lot to chew through though, so I would recommend it more as a reference. When something seems unclear in any accessibility advice you've read, go search for the issue you're concerned about and see if it clears it up for you:</p>
-<p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
-<p>Here we'll take it bit by bit, and try to apply its principles to our homepages.</p>
-<h2 id="the-wcag-principles">The WCAG Principles</h2>
+<h2 id="the-web-content-accessibility-guidelines-wcag-principles">The Web Content Accessibility Guidelines (WCAG) Principles</h2>
+<p>The WCAG principles form the acronym <strong>&quot;POUR&quot;</strong>, and state that a site should be <strong>Perceivable</strong>, <strong>Operable</strong>, <strong>Understandable</strong> and <strong>Robust</strong>:</p>
 <ul>
-<li><strong>Perceivable</strong>: Users are able to perceive the content, using one or more of their senses.</li>
-<li><strong>Operable</strong>: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).</li>
-<li><strong>Understandable</strong>: The content is understandable to its users.</li>
-<li><strong>Robust</strong>: The content is built with web standards that work across different browsers, now and in the future.</li>
+<li><em>Perceivable</em>: Users are able to perceive the content, using one or more of their senses.</li>
+<li><em>Operable</em>: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).</li>
+<li><em>Understandable</em>: The content is understandable to its users.</li>
+<li><em>Robust</em>: The content is built with web standards that work across different browsers, now and in the future.</li>
 </ul>
-<p>These P.O.U.R. principles are the roots of all the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?</p>
+<p>These <strong>P.O.U.R.</strong> principles are at the root of the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?</p>
+<h2 id="wcag-documentation">WCAG Documentation</h2>
+<p>The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.</p>
+<p>The guidelines are available for everyone to read. They're worth perusing if you would like some extremely dense bedtime reading! There is a lot to chew through though, so I would recommend using it more as a reference. When something seems unclear in accessibility advice you've read, you can go search for the issue you're concerned about and see if it clears it up for you:</p>
+<p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
+<p class="notice">
+<em>A Gentle Warning !</em>
+<br>If you think the WCAG is sort of inaccessible and hard to get into, you'd be right. It's a bit of an irony, and a beast of a document. I'm linking it here because you should be able to fnd it easily - but if it puts you off, don't worry!
+</P>
+<p>A much friendlier introduction can be found at the W3C's Web Accessibility Initiative (WAI)'s <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility</a>.</p>
+<p>Here we'll take it bit by bit, and try to apply its principles to our homepages.</p>
+<p>For more on these principles, please see the <a href="/guide">guide</a> page, and the <a href="/testing">testing</a> page to help you find issues on your own site :)</p>
 <h2 id="wcag-and-the-smol-indie-revival-web">WCAG and the Smol / Indie / Revival Web</h2>
 <p>There are, however, some caveats here. Personal websites are a little different to corporate, government or educational entities.</p>
 <h3 id="users">Users?</h3>
@@ -64,16 +74,8 @@ If you have suggestions, feel free to <a href="https://sarajoy.dev/#form">contac
 <p>Personality shines through in the words used in text. A flowery, colorful image can have colorful and flowery ALT text to describe it.</p>
 <p>As an example, an image that might be purely decorative on a corporate website (consider the ubiquitous photo of office workers laughing, looking at a laptop screen) should indeed be ignored for screen readers. In a similar position on the page, a personal website might have some art, or a fun graphic, or anything else that adds to the ✨vibes✨ of the site! These shouldn't be ignored. Add some ALT text! Go ahead and write silly, funny, or even sexy alt text, if that describes the graphic best.</p>
 <p>Personality may also come through via audio. Some actions on your site could trigger sounds. Blog posts could be recorded in audio, maybe as a podcast. Why not?</p>
-<h2 id="heres-a-little-of-what-i-hope-to-cover">Here's a little of what I hope to cover:</h2>
-<ul>
-<li>Disability spectrum</li>
-<li>Semantic HTML</li>
-<li>Image ALT text</li>
-<li>Focusable elements</li>
-<li>Responsive (zoomable) design</li>
-<li>Colors and contrast</li>
-<li>Using dev tools</li>
-</ul>
+<h2 id="welcome-to-whimsically">Welcome to Whimsically!</h2>
+<p>Please browse around, and please do feel free to <a href="https://sarajoy.dev/#find">contact me</a> with any suggestions and questions!</p>
 
     </main>
     <footer>

@@ -24,6 +24,11 @@ Want more? Here's more!
   - [More common accessibility issues that you can fix today](https://hidde.blog/more-common-a11y-issues/)
 
 ## Reference & Resources
-- [Inclusive Design Principles](https://inclusivedesignprinciples.info/)
 - [The W3C WAI Accessibility Fundamentals](https://www.w3.org/WAI/fundamentals/)
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+- [Inclusive Design Principles](https://inclusivedesignprinciples.info/)
+
+## Communities & Projects
 - [The A11y Project](https://www.a11yproject.com/)
+- [Accessible Net Directory](https://pinkvampyr.leprd.space/accessiblenet/)
+- [a11y-webring.club/](https://a11y-webring.club/)
