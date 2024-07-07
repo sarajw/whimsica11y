@@ -56,6 +56,12 @@ html.mono {
   --chroma: 0;
 }
 
+:focus-visible, .fake-focus {
+  outline: 2px solid var(--vlink);
+  outline-offset: 2px;
+  border-radius: 0.1em;
+}
+
 main {
   font-size: clamp(0.9rem, 0.9rem + 0.5vw, 1.25rem);
   line-height: 1.4;

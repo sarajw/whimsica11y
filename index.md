@@ -24,10 +24,10 @@ Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whi
 
 The WCAG principles form the acronym **"POUR"**, and state that a site should be **Perceivable**, **Operable**, **Understandable** and **Robust**:
 
-- _Perceivable_: Users are able to perceive the content, using one or more of their senses.
-- _Operable_: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).
-- _Understandable_: The content is understandable to its users.
-- _Robust_: The content is built with web standards that work across different browsers, now and in the future.
+- **Perceivable**: Users are able to perceive the content, using one or more of their senses.
+- **Operable**: Users are able to control UI elements (e.g. buttons must be 'clickable' with a mouse, keyboard, voice command, etc.).
+- **Understandable**: The content is understandable to its users.
+- **Robust**: The content is built with web standards that work across different browsers, now and in the future.
 
 These **P.O.U.R.** principles are at the root of the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?
 
