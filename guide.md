@@ -12,7 +12,10 @@ More coming soon...
 #### Colors & contrasts
 ### Audible & Tactile
 #### Screen-readable
-
+#### Semantic HTML
+Not to self - answer this:
+> I've seen things saying "you should use semantic html" but have not been able to wrap my head around how to use it, what it does, why it's preferable to regular html, or how screenreader programs are interacting with it, for example. which is frustrating, becausse if i don't know what something actually does then i don't know how to implement it properly.
+#### Alt text
 ## Operable
 ### Tabbing & focus
 #### Focus styles
