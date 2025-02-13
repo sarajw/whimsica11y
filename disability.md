@@ -8,9 +8,26 @@ There are so many types and severities of disability. Lots of us have some level
 
 Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
 
-<iframe title="Apple - The Greatest" src="https://player.vimeo.com/video/776811579?dnt=1&amp;app_id=122963" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
-
-(Aside: Unfortunately the version of this video with audio description has disappeared from YouTube, along with the original [the above embed is from Vimeo] - any hints at where to find a copy are very welcome!)
+<video id="the-greatest" width="100%" preload="metadata" src="https://www.apple.com/105/media/us/home/2022/327f74a7-aa03-49c4-9876-e3c658b20fd8/films/accessibility-the-greatest/home-accessibility-the-greatest-tpl-us-2022_16x9.m3u8" poster="/assets/images/the-greatest-poster.jpg" controls></video>
+<script type="module" defer>
+	const video = document.getElementById("the-greatest");
+	if (!video.canPlayType("application/vnd.apple.mpegurl")) {
+		await import("/assets/scripts/hls.light.min.js");
+		const hls = new Hls({ autoStartLoad: false });
+		// Default to English Audio Description audio with English captions
+		hls.setAudioOption({ name: "English Audio Descriptions" });
+		hls.setSubtitleOption({ name: "English" });
+		hls.loadSource(video.src);
+		hls.attachMedia(video);
+	} else {
+		video.addEventListener("canplay", () => {
+			// Default to English Audio Description audio with English captions
+			video.audioTracks[0].enabled = false;
+			video.audioTracks[1].enabled = true;
+			video.textTracks[0].enabled = true;
+		}, { once: true });
+	}
+</script>
 
 <a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:
 > <q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for **blindness** and **low vision**, **deafness** and **hearing loss**, **limited movement**, **speech disabilities**, **photosensitivity**, and combinations of these, and some accommodation for **learning disabilities** and **cognitive limitations**; but will not address every user need for people with these disabilities.</q>
