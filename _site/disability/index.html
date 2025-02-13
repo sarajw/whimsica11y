@@ -31,12 +31,12 @@
       <h1 id="disability">Disability</h1>
 <p>There are so many types and severities of disability. Lots of us have some level of disability, and we all have access to our wonderful web!</p>
 <p>Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.</p>
-<p><video id="the-greatest" width="100%" src="https://www.apple.com/105/media/us/home/2022/327f74a7-aa03-49c4-9876-e3c658b20fd8/films/accessibility-the-greatest/home-accessibility-the-greatest-tpl-us-2022_16x9.m3u8" controls></video></p>
-<script type="module">
+<p><video id="the-greatest" width="100%" preload="metadata" src="https://www.apple.com/105/media/us/home/2022/327f74a7-aa03-49c4-9876-e3c658b20fd8/films/accessibility-the-greatest/home-accessibility-the-greatest-tpl-us-2022_16x9.m3u8" poster="/assets/images/the-greatest-poster.jpg" controls></video></p>
+<script type="module" defer>
 	const video = document.getElementById("the-greatest");
 	if (!video.canPlayType("application/vnd.apple.mpegurl")) {
-		const { default: Hls } = await import("https://esm.sh/hls.js@1.5.20/es2022/hls.mjs");
-		const hls = new Hls();
+		await import("/assets/scripts/hls.light.min.js");
+		const hls = new Hls({ autoStartLoad: false });
 		// Default to English Audio Description audio with English captions
 		hls.setAudioOption({ name: "English Audio Descriptions" });
 		hls.setSubtitleOption({ name: "English" });
