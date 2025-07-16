@@ -56,6 +56,9 @@ html.mono {
   accent-color: gray;
   --chroma: 0;
 }
+html.mono img {
+  filter: grayscale();
+}
 
 :focus-visible, .fake-focus {
   outline: 2px solid var(--vlink);
