@@ -8,9 +8,9 @@ There are so many types and severities of disability. Lots of us have some level
 
 Having some idea of these disabilities and the assistive tech or browser features that we use, will help you in making your site more accessible to all of us.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8sX9IEHWRJ8?si=bNwVbT_Olbg3eOOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<iframe title="Apple - The Greatest" src="https://player.vimeo.com/video/776811579?dnt=1&amp;app_id=122963" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
 
-[Version of video with audio descriptions.](https://www.youtube-nocookie.com/embed/tVErGewfgdg?si=znzfw08vV1nFWVb7)
+(Aside: Unfortunately the version of this video with audio description has disappeared from YouTube, along with the original [the above embed is from Vimeo] - any hints at where to find a copy are very welcome!)
 
 <a href="https://www.w3.org/TR/WCAG22/">The Web Content Accessibility Guidelines (WCAG) 2.2</a> say:
 > <q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for **blindness** and **low vision**, **deafness** and **hearing loss**, **limited movement**, **speech disabilities**, **photosensitivity**, and combinations of these, and some accommodation for **learning disabilities** and **cognitive limitations**; but will not address every user need for people with these disabilities.</q>
