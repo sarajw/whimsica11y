@@ -7,6 +7,10 @@ layout: whimsica11yLayout.html
 
 Hey, want your homepage to be more inclusive? We'd like to help you with that :)
 
+<img class="whimsy-image" src="/assets/images/whimsica11y.svg" alt="The word 'whimsic' written in uppercase letters, formed into a curved rainbow shape. Underneath the arch is the numeronym 'a11y'. The letters have a bubbly cartoonish style. The 'whimsic' curve has bands across it like a rainbow, using the colours from the diagonal of the Disability Pride flag.">
+
+Whimsic accessibility! Whimsic was a word, once. We all need more whimsy.
+
 <p class="notice">
 This website is being "built in public" and is still very much
 <br>🏗️ <em>Under Construction</em> 🚧
@@ -15,10 +19,6 @@ If you have ideas or suggestions, feel free to <a href="https://sarajoy.dev/#for
 </p>
 
 Web accessibility guides and advice online are heavily geared towards businesses and public services. This doesn't make the advice wrong by any means, but it can make it hard to read, and to connect with the rather different goals of a personal website.
-
-<p class="word-art" aria-hidden="true">Whimsica11y</p>
-
-Whimsic accessibility, I suppose? Whimsic was a word, once. We all need more whimsy.
 
 ## The Web Content Accessibility Guidelines (WCAG) Principles
 
@@ -32,6 +32,7 @@ The WCAG principles form the acronym **"POUR"**, and state that a site should be
 These **P.O.U.R.** principles are at the root of the guidelines. They also make sense - what use is a website if its contents can't be perceived, the controls can't be operated, the content isn't understandable, and it keeps breaking?
 
 ## WCAG Documentation
+
 The WCAG have covered almost everything, which is great. It also has almost everything, which is... a lot.
 
 The guidelines are available for everyone to read. They're worth perusing if you would like some extremely dense bedtime reading! There is a lot to chew through though, so I would recommend using it more as a reference. When something seems unclear in accessibility advice you've read, you can go search for the issue you're concerned about and see if it clears it up for you:
@@ -54,6 +55,7 @@ For more on these principles, please see the [guide](/guide) page, and the [test
 There are, however, some caveats here. Personal websites are a little different to corporate, government or educational entities.
 
 ### Users?
+
 Firstly, do personal homepages have users? Do we expect people to 'use' our homepage, or visit? Read? Look at? Enjoy? Are they invited in to a little online part of our personal world? In this case, they are visitors, or even guests.
 
 We used to even place guest books on our websites. Many of us still do! They are currently enjoying a [revival](https://manuelmoreale.com/guestbooks-are-cool) :)
@@ -61,6 +63,7 @@ We used to even place guest books on our websites. Many of us still do! They are
 The term user, guest and visitor will be used interchangeably on this website.
 
 ### Perceivable and Understandable
+
 Some of these personal websites are art. Some of them, even to a 20-20 sighted, able bodied visitor, are not fully understandable, or have hidden easter eggs that may not ever be perceived. We don't want these pieces of art to go away.
 
 If the website is to be explored, to allow for surprises, maybe even make people confused on purpose - cool. We love that stuff. Key here, is to allow exploration not only with eyes and a mouse. I'm not entirely sure what form this would take. I would love to see people jump into this space and play with it! Only by exploration and experimentation can we push the web platform forward, and open up new possibilities to everyone.
@@ -68,6 +71,7 @@ If the website is to be explored, to allow for surprises, maybe even make people
 Here there is a balance between efficiency and ease of use, versus wanting a visitor to take their time. How do we manage that without being making things frustrating, or too difficult?
 
 ### Personality
+
 People have argued that accessibility guidelines rob websites of personality. This isn't true.
 
 Personality shines through in the words used in text. A flowery, colorful image can have colorful and flowery ALT text to describe it.

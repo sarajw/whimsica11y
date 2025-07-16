@@ -39,6 +39,7 @@ html {
   --accent-color: oklch(50% 0.2 var(--hue));
   --text: color-mix(in srgb, var(--theme) var(--theme-strength), CanvasText);
   --background: color-mix(in srgb, var(--theme) var(--theme-strength), Canvas);
+  --shadow: light-dark(#0004, #000);
   --link: color-mix(in srgb, var(--invert-theme) 40%, CanvasText);
   --vlink: color-mix(in srgb, var(--invert-theme) 20%, CanvasText);
   --alink: color-mix(in srgb, var(--invert-theme) 60%, CanvasText);
@@ -99,9 +100,17 @@ header {
   font-family: 'Ships Whistle Italic Rough';
   font-feature-settings: 'ss01';
   font-size: clamp(3.5rem, 1rem + 5vw, 5rem);
-  font-weight: 400;
+  font-weight: 600;
   margin-block: 0;
 }
+.word-art {
+  color: transparent;
+  background: linear-gradient(45deg, var(--theme), var(--theme-plus-90), var(--invert-theme), var(--theme-minus-90), var(--theme));
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 0 0.25rem var(--shadow));
+}
+
 nav, footer, h1, h2, h3, h4 {
   font-family: var(--display-font);
 }
@@ -138,20 +147,23 @@ button, .hue-slider, .notice {
   font-family: var(--display-font);
   font-size: 1.1em;
   text-align: center;
+  box-shadow: 0 0 0.25rem var(--shadow);
 }
 #switches button[aria-pressed="true"] {
   color: var(--background);
   background-color: var(--text);
 }
-button:hover, .notice {
+button:hover, .hue-slider:hover, .notice {
   color: CanvasText;
   background-color: Canvas;
 }
 button:active { translate: 1px 1px }
+
 .notice {
   margin-inline: auto;
   padding: 0.5em 0.75em;
   max-width: 40ch;
+  box-shadow: 0 0 0.5rem var(--shadow);
 }
 
 h1, h2, h3, h4 {
@@ -173,6 +185,7 @@ em {
   font-family: 'Ships Whistle Italic';
 	font-feature-settings: 'ss01';
   font-size: 1.1em;
+  font-style: normal;
 }
 
 iframe {
@@ -185,26 +198,7 @@ footer {
   text-align: end;
 }
 
-.word-art {
-  font-family: 'Ships Whistle Italic Rough';
-	font-feature-settings: 'ss01';
-  --divider: 5.5;
-  font-size: min(calc( 60ch / var(--divider) ), calc( 100vw / var(--divider) ));
-  text-align: center;
-  color: transparent;
-  background: linear-gradient(45deg, var(--theme), var(--theme-plus-90), var(--invert-theme), var(--theme-minus-90), var(--theme));
-  background-clip: text;
-  -webkit-background-clip: text;
-  margin-block: 0.25em;
-}
-.word-art:before {
-  position: absolute;
-  z-index: -1;
-  color: CanvasText;
-  content: "Whimsica11y";
-  width: inherit;
-  height: inherit;
-  transform: translateX(-0.4em) translateY(0.17em) skewX(50deg) scaleY(0.65);
-  opacity: 0.25;
-  filter: blur(0.03em);
+.whimsy-image {
+  margin-block: 1rem;
+  filter: drop-shadow(0 0 0.5rem var(--shadow));
 }
